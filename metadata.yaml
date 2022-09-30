@@ -1,0 +1,24 @@
+name: cloudkitty
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+display-name: Cloudkitty
+summary: Rating as a Service add-on for Openstack
+description: |
+  Rating as a Service add-on for Openstack.
+
+tags:
+  - openstack
+series:
+  - jammy
+  - focal
+extra-bindings:
+  public:
+
+requires:
+  identity-service:
+    interface: keystone
+  database:
+    interface: mysql_client
+  metric-service:
+    interface: gnocchi
+  amqp:
+    interface: rabbitmq

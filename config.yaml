@@ -1,0 +1,9 @@
+options:
+  debug:
+    default: False
+    description: Enable debugging.
+    type: boolean
+  region:
+    type: string
+    default: RegionOne
+    description: OpenStack Region

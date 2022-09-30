@@ -1,0 +1,28 @@
+charm_name: cloudkitty
+
+smoke_bundles:
+- jammy-yoga
+
+gate_bundles:
+- jammy-yoga
+
+dev_bundles:
+- jammy-yoga
+
+configure:
+- zaza.openstack.charm_tests.ceilometer.setup.basic_setup
+
+tests:
+- zaza.openstack.charm_tests.cloudkitty.tests.CloudkittyTest
+
+target_deploy_status:
+  mysql:
+    num-expected-units: 1
+    workload-status: active
+    workload-status-message-prefix: ""
+  ceilometer:
+    workload-status: blocked
+    workload-status-message-prefix: "Run the ceilometer-upgrade action on the leader to initialize ceilometer and gnocchi"
+
+tests_options:
+  force_deploy: []

@@ -1,0 +1,10 @@
+coverage
+flake8
+stestr
+git+https://github.com/openstack-charmers/zaza.git#egg=zaza
+git+https://github.com/openstack-charmers/zaza-openstack-tests.git#egg=zaza.openstack
+requests-mock
+ripdb
+git+https://github.com/openstack/charm-ops-sunbeam.git
+mock
+git+https://opendev.org/openstack/charm-ops-openstack@master#egg=ops_openstack
